@@ -1,0 +1,127 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+% Sourced from: https://github.com/xdanaux/moderncv/blob/master/examples/template-multibib.tex
+
+\documentclass[12pt,a4paper,roman]{moderncv}          % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+%\usepackage[scale=0.975]{geometry}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+
+% personal data
+\firstname{Vincent}
+\familyname{Gallissot}
+\title{Systems and networks architect}
+\address{Lyon, France}
+\mobile{KzMzNiA1MDAgMTkgMTEzCg==}
+\email{dmdhbGxpc3NvdEBnbWFpbC5jb20K}
+\social[linkedin]{vgallissot}
+\photo[50pt][0pt]{default-pic.JPG}           % optional, remove / comment the line if not wanted; '50pt' is the height the picture must be resized to, 0pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+\quote{A dynamic and self-motivated Cloud and Linux administrator. Likes working in teams to solve difficult problems and automate complex infrastructures with Infrastructure As Code tools. Supports also GitOps and DevOps cultures that put human talents back at the forefront.}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+
+\section{Work experience}
+%\cventry{date start - date end}{Job title}{Company name}{Location}{Team details}{General Job description: will be on newline: no longer tha 1-2 lines}  % arguments 3 to 6 can be left empty
+\cventry{Jun 2017 - Current}{Networks and systems architect}{M6Web}{Lyon (France)}{NSA team (6pers)}
+{I work on the microservices architecture behind several RTL group's Catch-up TV websites (www.6play.fr, www.rtlmost.hu, play.rtl.hr, www.rtlplay.be). We use Kubernetes inside AWS cloud platform to keep scaling.
+\begin{itemize}
+  \item Creating our new cloud infrastructure (on AWS):
+  \begin{itemize}
+    \item Coding that Infrastructure with Terraform
+    \item Kops to manage our multiple Kubernetes clusters
+    \item Migration of our apps from on-premise to kubernetes on AWS (with Helm and Terraform)
+    \item User management with SSO and IAM roles between all our accounts
+  \end{itemize}
+  \item PoC of Spinnaker and Jenkins-x, using the Google Kubernetes Engine
+  \item Global optimizations to handle the migration from our french platform to a european one
+  \item Migration of all our public-facing webservers from Varnish 3 to 4
+  \item Adoption of SCRUM methods for the NSA team
+\end{itemize}}
+
+\cventry{Jun 2015 - Jun 2017}{Linux Systems Administrator}{PEAKS}{Lyon (France)}{NSA team (4pers)}
+{In the infrastucture team, I helped developpers creating the best for www.6play.fr, the Catch-up TV website of TV channels (M6, W9, Teva...) by providing them the needed infrastructure tools, autonomy on deployments, Continuous Integration, etc.
+\begin{itemize}
+  \item Build/run M6Web infrastructure:
+  \begin{itemize}
+    \item 400+ physical and virtual servers in 2 datacenters, 200Gbps IX
+    \item Ecosystem of 150+ private/public github projects (PHP7, Symfony3, Node.js 7+)
+  \end{itemize}
+  \item Build/Run IPTV platforms used by 6play's applications over ISP boxes
+  \item Build/Run broadcast platform (10+ channels) via Akamai CDN, SFR CDN, Elemental products
+  \item Maintain Continuous integration platform (Jenkins + Docker slaves, PoC Travis)
+  \item Automation with Ansible 2, Puppet 3, Capistrano 2
+  \item DevOPS tools for developer autonomy via Bash, Python, Ruby
+\end{itemize}}
+
+\cventry{Oct 2013 - May 2015}{Linux team leader}{Business \& Decision Eolas}{Grenoble (France)}{Linux team (5pers) of the Hosting pole (40pers)}
+{Eolas provides hosting solutions, including Linux, of which we were 5 to manage services for all customers (~1500 servers).
+\begin{itemize}
+  \item Datacenters industrialization (audit tools/working methods)
+  \item Build and run High-Availability infrastructures (Debian, RedHat)
+  \item Write operating files
+  \item Servers administration (Apache, Nginx, MySQL, Hybris, Node.js, Hadoop)
+  \item Team management (ITILv3 certified)
+  \item Internal projects management (Antidot, Ansible, Forge, Repositories, Scripts)
+  \item Linux support (level II)
+\end{itemize}}
+
+\cventry{Sep 2011 - Sep 2013}{Linux systems administrator}{INRIA}{Montbonnot (France)}{NSA team (9pers)}
+{In a public computer and automatic research center, I managed the Linux equipments: desktops, laptops and servers, from installation to service configuration to day-to-day maintenance.
+\begin{itemize}
+  \item Puppet3 implementation (200 machines)
+  \item Puppet : internal training, documentation drafting
+  \item Automated installation infrastructure (PXE, Kickstart, Preseed, YUM)
+  \item Fedora workstations administration (+110 users)
+  \item 90 CentOS servers administration (including 75 Xen VMs)
+\end{itemize}}
+
+\cventry{Sep 2010 - Sep 2011}{Systems and networks administrator}{Enigmatic}{Montbonnot (France)}{5pers}
+{I worked as a duo, managing the computer equipment of several clients, ranging from a few employees to a group of a hundred people.
+\begin{itemize}
+  \item Websites hosting (Apache, MySQL with master-master replication)
+  \item Emails servers administration (Postfix), DNS (Bind) under Debian
+  \item Client's new agencies configuration (nomad/site to site VPN, Firewalls)
+  \item 100 workstations park full migration (team work)
+  \item Hyper-V virtualization under Windows 2008 R2
+  \item Microsoft Exchange under Windows 2003 and 2008 R2
+  \item Active Directory domains junction and domain controller migration
+  \item Microsoft ForeFront TMG and ISA 2004 Firewalls
+\end{itemize}}
+
+
+\section{Education}
+\cventry{2011 - 2013}{Master’s degree}{Grenoble INP}{Grenoble (France)}{Sandwich course at INRIA}{Master thesis : How to change of configurations management tool? (ITIL v3 concepts)}
+\cventry{2010 - 2011}{Bachelor's degree}{University of Montpellier 2}{Béziers (France)}{Sandwich course at Enigmatic}{}
+
+
+\section{Languages}
+\cvitemwithcomment{French}{Native}{}
+\cvitemwithcomment{English}{level BULATS B2 (2012)}{}
+
+
+\section{Interests}
+\cvlistdoubleitem{Alpine skiing}{Climbing (mostly Lead, a little of boulder)}
+\cvlistdoubleitem{Cycle (preferred means of transportation)}{Hiking}
+%\cvlistitem{Board games (7Wonders, Blood rage, Lords of Xidit, Ginkgopolis)}
+\cvlistitem{Board games}
+
+
+\end{document}
