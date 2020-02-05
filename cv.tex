@@ -19,7 +19,10 @@
 %\usepackage[scale=0.975]{geometry}
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 
-% personal data
+
+%----------------------------------------------------------------------------------
+%            Header - personnal data
+%----------------------------------------------------------------------------------
 \firstname{Vincent}
 \familyname{Gallissot}
 \title{Systems and networks architect}
@@ -43,49 +46,32 @@
 
 
 % ## \cventry{Jan 2019 - Current}{Lead Ops}{Bedrock}{Lyon (France)}{SRE team (6pers)}
-% ## {My team is responsible of cloud infrastructures, called Bedrock, on which rely several RTL group streaming platforms and also the French streaming platform Salto.
+% ## {My team is responsible of cloud & on-premise infrastructures on which rely several RTL group streaming platforms and also the French streaming platform Salto.
+
 % ## multiple AWS regions
 % ## FinOps to reduce costs as much as possible
-% ## terraform for everything inside AWS
+% ## terraform to control AWS, GCP or Fastly resources (100K lines of code)
 % ## several kubernetes clusters
 % ## * using HAProxy ingress controller
 % ## * VPC CNI to take best advantage of AWS networks
-% ## * 
+% ## 
+% ## migration all apps in the cloud (all but fronts + bo + data + video)
+% ## repair kubernetes failures (NAT, DNS)
+% ## stabilizing kubernetes autoscaling + metrics + logging + ingress
+% ## 
+% ## Preparing Salto platform: restricted access to a lot of micro-services, opening external video contributions
+% ## 
 % ## 
 % ## multi-tenant:
-% ## * CI/CD for 50+ micro services for each tenant
-% ## * metrics from different platforms
-% ## * logs of all applications
 % ## * multi-CDN (all terraformed)
 % ## * tenant are agnostic from one to another
-% ## 
-% ## 
-% ## 
-% ## video:
-% ## using just-in-time packaging Quortex solution inside kubernetes clusters
-% ## own on-premise CDN edge servers (lots of TB per day)
-% ## 
-% ## 
-% ## 
-% ## 
-% ## \begin{itemize}
-% ##   \item Using AWS on multiple regions:
-% ##   \begin{itemize}
-% ##     \item Managing Terraform code for several tenants with different and complex needs
-% ##     \item Migrating all our Video workflows to the cloud 
-% ##     \item Migration of our apps from on-premise to kubernetes on AWS (with Helm and Terraform)
-% ##     \item User management with SSO and IAM roles between all our accounts
-% ##   \end{itemize}
-% ##   \item PoC of Spinnaker and Jenkins-x, using the Google Kubernetes Engine
-% ##   \item Global optimizations to handle the migration from our french platform to a european one
-% ##   \item Migration of all our public-facing webservers from Varnish 3 to 4
-% ##   \item Adoption of SCRUM methods for the NSA team
-% ## \end{itemize}}
+% ##
 
-\cventry{Jun 2017 - Dec 2018}{Networks and systems architect}{M6Web}{Lyon (France)}{NSA team (6pers)}
+
+\cventry{Jun 2017 - Dec 2018}{Networks and systems architect}{M6Web}{Lyon (France)}{SRE team (6pers)}
 {I worked on the microservices architecture behind several RTL group's streaming websites (www.6play.fr, www.rtlmost.hu, play.rtl.hr, www.rtlplay.be). We use Kubernetes inside AWS cloud platform to keep scaling.
 \begin{itemize}
-  \item Creating our new cloud infrastructure (on AWS):
+  \item Creating our new cloud infrastructure on AWS:
   \begin{itemize}
     \item Coding that Infrastructure with Terraform
     \item Kops to manage our multiple Kubernetes clusters
@@ -150,7 +136,16 @@
 
 
 \section{Conferences}
-\cvitem{2019}{\textit{Speaker:} M6 Open Lyon meetup - Peaks meetup - HAProxy conf Amsterdam}
+\cvitem{2019}{\textit{Speaker:}
+    \href{https://fr.slideshare.net/VincentGallissot/comment-m6-a-migr-ses-applications-dans-le-cloud-aws-kubernetes}
+    {
+        \color{blue}M6 Open meetup Lyon
+    }
+    / Peaks meetup Lyon /
+    \href{https://fr.slideshare.net/VincentGallissot/20191112-haproxy-conf-2019-rtl-journey-to-kubernetes-with-haproxy}
+    {
+        \color{blue}HAProxy Conf Amsterdam}
+    }
 \cvitem{2019}{\textit{Spectator:} QCon London / KubeCon + CloudNativeCon Barcelona}
 \cvitem{2018}{\textit{Spectator:} KubeCon + CloudNativeCon Copenhagen / DotScale Paris / AWS Re:Invent Las Vegas}
 \cvitem{2017}{\textit{Spectator:} O'Reilly Velocity London / DotScale Paris}
