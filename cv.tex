@@ -44,28 +44,21 @@
 \section{Work experience}
 %\cventry{date start - date end}{Job title}{Company name}{Location}{Team details}{General Job description: will be on newline: no longer tha 1-2 lines}  % arguments 3 to 6 can be left empty
 
-
-% ## \cventry{Jan 2019 - Current}{Lead Ops}{Bedrock}{Lyon (France)}{SRE team (6pers)}
-% ## {My team is responsible of cloud & on-premise infrastructures on which rely several RTL group streaming platforms and also the French streaming platform Salto.
-
-% ## multiple AWS regions
-% ## FinOps to reduce costs as much as possible
-% ## terraform to control AWS, GCP or Fastly resources (100K lines of code)
-% ## several kubernetes clusters
-% ## * using HAProxy ingress controller
-% ## * VPC CNI to take best advantage of AWS networks
-% ## 
-% ## migration all apps in the cloud (all but fronts + bo + data + video)
-% ## repair kubernetes failures (NAT, DNS)
-% ## stabilizing kubernetes autoscaling + metrics + logging + ingress
-% ## 
-% ## Preparing Salto platform: restricted access to a lot of micro-services, opening external video contributions
-% ## 
-% ## 
-% ## multi-tenant:
-% ## * multi-CDN (all terraformed)
-% ## * tenant are agnostic from one to another
-% ##
+\cventry{Jan 2019 - Current}{Lead Ops}{Bedrock}{Lyon (France)}{SRE team (6pers)}
+{My team is responsible for the cloud and on-premise infrastructures on which several streaming platforms such as those of RTL Group and also the French streaming platform Salto are based.
+\begin{itemize}
+  \item Migrating a large number of microservices to Kubernetes on AWS:
+  \begin{itemize}
+    \item Without downtime, \href{https://tech.bedrockstreaming.com/Migrating-production-apps-from-on-premise-to-the-cloud-with-no-downtime/}{\color{blue}see blogpost about it}
+    \item By constantly adapting our configurations (autoscaling, overprovisionning)
+    \item By adding a lot of tools to Kubernetes (Victoria Metrics, HAProxy Ingress, Loki, SPOT handler)
+    \item On 100\% SPOT worker nodes
+    \item Also spending a lot of time repairing Kubernetes failures (NAT, DNS and many more)
+  \end{itemize}
+  \item Terraform to control AWS, GCP or Fastly resources (+100K lines of code, multiple AWS regions)
+  \item FinOps to reduce costs as much as possible
+  \item Preparing salto.fr platform (restricted preview + its micro-services, separated AWS accounts)
+\end{itemize}}
 
 
 \cventry{Jun 2017 - Dec 2018}{Networks and systems architect}{M6Web}{Lyon (France)}{SRE team (6pers)}
@@ -81,8 +74,9 @@
   \item PoC of Spinnaker and Jenkins-x, using the Google Kubernetes Engine
   \item Global optimizations to handle the migration from our french platform to a european one
   \item Migration of all our public-facing webservers from Varnish 3 to 4
-  \item Adoption of SCRUM methods for the NSA team
+  \item Adoption of SCRUM methods for the SRE team
 \end{itemize}}
+
 
 \cventry{Jun 2015 - Jun 2017}{Linux Systems Administrator}{PEAKS for M6Web}{Lyon (France)}{SRE team (4pers)}
 {In the infrastucture team, I helped developpers creating the best for www.6play.fr, the Catch-up TV website of TV channels (M6, W9, Teva...) by providing them the needed infrastructure tools, autonomy on deployments, Continuous Integration, etc.
@@ -99,6 +93,7 @@
   \item DevOPS tools for developer autonomy via Bash, Python, Ruby
 \end{itemize}}
 
+
 \cventry{Oct 2013 - May 2015}{Linux team leader}{Business \& Decision Eolas}{Grenoble (France)}{Linux team (5pers) of the Hosting pole (40pers)}
 {Eolas provides hosting solutions, including Linux, of which we were 5 to manage services for all customers (~1500 servers).
 \begin{itemize}
@@ -111,6 +106,7 @@
   \item Linux support (level II)
 \end{itemize}}
 
+
 \cventry{Sep 2011 - Sep 2013}{Linux systems administrator}{INRIA}{Montbonnot (France)}{NSA team (9pers)}
 {In a public computer and automatic research center, I managed the Linux equipments: desktops, laptops and servers, from installation to service configuration to day-to-day maintenance.
 \begin{itemize}
@@ -120,6 +116,7 @@
   \item Fedora workstations administration (+110 users)
   \item 90 CentOS servers administration (including 75 Xen VMs)
 \end{itemize}}
+
 
 \cventry{Sep 2010 - Sep 2011}{Systems and networks administrator}{Enigmatic}{Montbonnot (France)}{5pers}
 {I worked as a duo, managing the computer equipment of several clients, ranging from a few employees to a group of a hundred people.
@@ -133,6 +130,7 @@
   \item Active Directory domains junction and domain controller migration
   \item Microsoft ForeFront TMG and ISA 2004 Firewalls
 \end{itemize}}
+
 
 
 \section{Conferences}
@@ -151,9 +149,11 @@
 \cvitem{2017}{\textit{Spectator:} O'Reilly Velocity London / DotScale Paris}
 
 
+
 \section{Education}
 \cventry{2011 - 2013}{Master’s degree}{Grenoble INP}{Grenoble (France)}{Sandwich course at INRIA}{Master thesis : How to change of configurations management tool? (ITIL v3 concepts)}
 \cventry{2010 - 2011}{Bachelor's degree}{University of Montpellier 2}{Béziers (France)}{Sandwich course at Enigmatic}{}
+
 
 
 \section{Languages}
@@ -161,10 +161,12 @@
 \cvitemwithcomment{English}{Business fluent: TOEIC 880 (2019), BULATS B2 (2012)}{}
 
 
+
 \section{Interests}
 \cvlistdoubleitem{Alpine skiing}{Climbing (mostly Lead, a little of boulder)}
 \cvlistdoubleitem{Cycle (preferred means of transportation)}{Hiking}
 \cvlistitem{Board games}
+
 
 
 \end{document}
