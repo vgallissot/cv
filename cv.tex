@@ -29,7 +29,7 @@
 %----------------------------------------------------------------------------------
 \firstname{Vincent}
 \familyname{Gallissot}
-\title{Systems and networks architect}
+\title{Systems, networks and cloud architect}
 \address{Lyon, France}
 \mobile{KzMzNiA1MDAgMTkgMTEzCg==}
 \email{dmdhbGxpc3NvdEBnbWFpbC5jb20K}
@@ -49,19 +49,30 @@
 %\cventry{date start - date end}{Job title}{Company name}{Location}{Team details}{General Job description: will be on newline: no longer tha 1-2 lines}  % arguments 3 to 6 can be left empty
 
 \cventry{Jan 2019 - Current}{Lead Ops}{Bedrock}{Lyon (France)}{SRE team (6pers)}
-{My team is responsible for the cloud and on-premise infrastructures on which several streaming platforms such as those of RTL Group and also the French streaming platform Salto are based.
+{My team is responsible for the cloud and on-premise core infrastructures. Over than 35 million users benefit from these infras, as do our 250 tech colleagues at Bedrock.
 \begin{itemize}
+  \item Recruitment and onboarding of 6 people in the middle of the COVID19 epidemic (out of 50 interviews)
+  \item Adaptation of the team and my management from the pre-COVID to a full remote and restrictions
+  \item Construction of a scalable, high-performance and cost-effective video distribution platform (10k rps with 120ms 95th percentile, full Spot)
+  \item Launch of salto.fr, a platform with +10.000h of VOD programs (restricted preview \& its micro-services, separate AWS accounts)
+  \item Moving from a multi-tenant platform to several instances each composed of multi-tenants
+  \begin{itemize}
+    \item Using terraform workspaces to industrialize efficiently about twenty AWS accounts
+    \item Centralizing the logs and metrics of all accounts
+    \item Setting up generalized security policies
+    \item Ending up with fully isolated customers platforms, but automated, facilitating the chain of deployments and developpers use
+  \end{itemize}
+  \item \href{https://tech.bedrockstreaming.com/Three-years-running-kubernetes-on-production-at-Bedrock/}{\color{blue}Stabilizations of Kubernetes} to accommodate tens of thousands of pods on hundreds of nodes
+  \item Terraform to control AWS, GCP or Fastly resources (+100K lines of code, multiple AWS regions)
+  \item FinOps to reduce costs as much as possible
   \item Migrating a large number of microservices to Kubernetes on AWS:
   \begin{itemize}
     \item Without downtime, \href{https://tech.bedrockstreaming.com/Migrating-production-apps-from-on-premise-to-the-cloud-with-no-downtime/}{\color{blue}see blogpost about it}
     \item By constantly adapting our configurations (autoscaling, overprovisionning)
-    \item By adding a lot of tools to Kubernetes (Victoria Metrics, HAProxy Ingress, Loki, SPOT handler)
-    \item On 100\% SPOT worker nodes
+    \item By adding a lot of tools to Kubernetes (Victoria Metrics, HAProxy Ingress, Loki, Spot handler)
+    \item On 100\% Spot worker nodes
     \item Also spending a lot of time repairing Kubernetes failures (NAT, DNS and many more)
   \end{itemize}
-  \item Terraform to control AWS, GCP or Fastly resources (+100K lines of code, multiple AWS regions)
-  \item FinOps to reduce costs as much as possible
-  \item Preparing salto.fr platform (restricted preview + its micro-services, separated AWS accounts)
 \end{itemize}}
 
 
@@ -138,6 +149,7 @@
 
 
 \section{Conferences}
+\cvitem{2020}{\textit{Spectator:} QCon London}
 \cvitem{2019}{\textit{Speaker:}
     \href{https://fr.slideshare.net/VincentGallissot/comment-m6-a-migr-ses-applications-dans-le-cloud-aws-kubernetes}
     {
