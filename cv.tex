@@ -29,14 +29,15 @@
 %----------------------------------------------------------------------------------
 \firstname{Vincent}
 \familyname{Gallissot}
-\title{Systems, networks and cloud architect}
+\title{Lead Cloud Architect -\\
+Senior Site Reliability Engineer}
 \address{Lyon, France}
 \mobile{KzMzNiA1MDAgMTkgMTEzCg==}
 \email{dmdhbGxpc3NvdEBnbWFpbC5jb20K}
 \social[linkedin]{vgallissot}
 \photo[50pt][0pt]{default-pic.JPG}           % optional, remove / comment the line if not wanted; '50pt' is the height the picture must be resized to, 0pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
-\quote{A dynamic and self-motivated Cloud and Linux administrator. Likes working in teams to solve difficult problems and automate complex infrastructures with Infrastructure As Code tools. Supports also GitOps and DevOps cultures that put human talents back at the forefront.}
+\quote{I have relearned my job with the move to the cloud and I love this paradigm shift. Infra As Code, GitOps and the DevOps culture are for me the keys to a quality infrastructure.}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -51,42 +52,24 @@
 \cventry{Jan 2019 - Current}{Lead Ops}{Bedrock}{Lyon (France)}{SRE team (6pers)}
 {My team is responsible for the cloud and on-premise core infrastructures. Over than 35 million users benefit from these infras, as do our 250 tech colleagues at Bedrock.
 \begin{itemize}
+  \item Creation of on-call duty: migration of alerting to Prometheus/Victoria Metrics and PagerDuty
+  \item Responsible for the project to move one datacenter to 2 others, without downtime, in 6 months all inclusive (new network equipment + VMWare->Xen migration)
   \item Recruitment and onboarding of 6 people in the middle of the COVID19 epidemic (out of 50 interviews)
-  \item Adaptation of the team and my management from the pre-COVID to a full remote and restrictions
-  \item Construction of a scalable, high-performance and cost-effective video distribution platform (10k rps with 120ms 95th percentile, full Spot)
-  \item Launch of salto.fr, a platform with +10.000h of VOD programs (restricted preview \& its micro-services, separate AWS accounts)
-  \item Moving from a multi-tenant platform to several instances each composed of multi-tenants
-  \begin{itemize}
-    \item Using terraform workspaces to industrialize efficiently about twenty AWS accounts
-    \item Centralizing the logs and metrics of all accounts
-    \item Setting up generalized security policies
-    \item Ending up with fully isolated customers platforms, but automated, facilitating the chain of deployments and developpers use
-  \end{itemize}
+  \item Adaptation of the team and my management from the pre-COVID to a full remote and restrictions then back to a mix of remote and physical
+  \item \href{https://tech.bedrockstreaming.com/scaling-bedrock-video-delivery-to-50-million-users/}{\color{blue}Scaling Bedrock video delivery to 50 million users}
+  \item Launch of salto.fr, videoland.nl: platforms with +10.000h of VOD programs (restricted preview \& its micro-services, separate AWS accounts)
+  \item Moving from one multi-tenant platform to several instances each composed of multi-tenants
   \item \href{https://tech.bedrockstreaming.com/Three-years-running-kubernetes-on-production-at-Bedrock/}{\color{blue}Stabilizations of Kubernetes} to accommodate tens of thousands of pods on hundreds of nodes
   \item Terraform to control AWS, GCP or Fastly resources (+100K lines of code, multiple AWS regions)
   \item FinOps to reduce costs as much as possible
-  \item Migrating a large number of microservices to Kubernetes on AWS:
-  \begin{itemize}
-    \item Without downtime, \href{https://tech.bedrockstreaming.com/Migrating-production-apps-from-on-premise-to-the-cloud-with-no-downtime/}{\color{blue}see blogpost about it}
-    \item By constantly adapting our configurations (autoscaling, overprovisionning)
-    \item By adding a lot of tools to Kubernetes (Victoria Metrics, HAProxy Ingress, Loki, Spot handler)
-    \item On 100\% Spot worker nodes
-    \item Also spending a lot of time repairing Kubernetes failures (NAT, DNS and many more)
-  \end{itemize}
+  \item \href{https://tech.bedrockstreaming.com/Migrating-production-apps-from-on-premise-to-the-cloud-with-no-downtime/}{\color{blue}Migrating production applications from on-premise to the cloud with no downtime}
 \end{itemize}}
 
 
 \cventry{Jun 2017 - Dec 2018}{Networks and systems architect}{M6Web}{Lyon (France)}{SRE team (6pers)}
 {I worked on the microservices architecture behind several RTL group's streaming websites (www.6play.fr, www.rtlmost.hu, play.rtl.hr, www.rtlplay.be). We use Kubernetes inside AWS cloud platform to keep scaling.
 \begin{itemize}
-  \item Creating our new cloud infrastructure on AWS:
-  \begin{itemize}
-    \item Coding that Infrastructure with Terraform
-    \item Kops to manage our multiple Kubernetes clusters
-    \item Migration of our apps from on-premise to kubernetes on AWS (with Helm and Terraform)
-    \item User management with SSO and IAM roles between all our accounts
-  \end{itemize}
-  \item PoC of Spinnaker and Jenkins-x, using the Google Kubernetes Engine
+  \item Creating a brand new infrastructure on AWS with Terraform, Kops (Kubernetes), Helm
   \item Global optimizations to handle the migration from our french platform to a european one
   \item Migration of all our public-facing webservers from Varnish 3 to 4
   \item Adoption of SCRUM methods for the SRE team
@@ -186,7 +169,6 @@
 \section{Interests}
 \cvlistdoubleitem{Alpine skiing}{Climbing (mostly Lead, a little of boulder)}
 \cvlistdoubleitem{Cycle (preferred means of transportation)}{Hiking}
-\cvlistitem{Board games}
 
 
 
