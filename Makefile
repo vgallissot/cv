@@ -19,4 +19,4 @@ purge: clean
 	rm -f $(PDFFILE)
 
 requirements:
-	dnf install -y texlive-moderncv texlive-multibib
+	dnf install -y texlive-moderncv texlive-multibib texlive-fontawesome5 texlive-academicons texlive-multirow texlive-arydshln
